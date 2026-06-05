@@ -1,0 +1,419 @@
+Microsoft Windows [Version 10.0.26100.8524]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\gitprogram>git https://github.com/kamaljit-05/mypythonprogram.git
+git: 'https://github.com/kamaljit-05/mypythonprogram.git' is not a git command. See 'git --help'.
+
+D:\gitprogram>git clone https://github.com/kamaljit-05/mypythonprogram.git
+Cloning into 'mypythonprogram'...
+warning: You appear to have cloned an empty repository.
+
+D:\gitprogram>git add .
+fatal: not a git repository (or any of the parent directories): .git
+
+D:\gitprogram>cd mypythonprogram
+
+D:\gitprogram\mypythonprogram>git add .
+warning: in the working copy of 'pandasprogram/student.csv', LF will be replaced by CRLF the next time Git touches it
+
+D:\gitprogram\mypythonprogram>git commit -m "all program"
+[main (root-commit) 173dfef] all program
+ 385 files changed, 10877 insertions(+)
+ create mode 100644 Dict/dict
+ create mode 100644 Dict/dict1.py
+ create mode 100644 Dict/dict10.py
+ create mode 100644 Dict/dict11.py
+ create mode 100644 Dict/dict12.py
+ create mode 100644 Dict/dict13.py
+ create mode 100644 Dict/dict14.py
+ create mode 100644 Dict/dict15.py
+ create mode 100644 Dict/dict16.py
+ create mode 100644 Dict/dict17.py
+ create mode 100644 Dict/dict18.py
+ create mode 100644 Dict/dict19.py
+ create mode 100644 Dict/dict2.py
+ create mode 100644 Dict/dict20.py
+ create mode 100644 Dict/dict21.py
+ create mode 100644 Dict/dict22.py
+ create mode 100644 Dict/dict3.py
+ create mode 100644 Dict/dict4.py
+ create mode 100644 Dict/dict5.py
+ create mode 100644 Dict/dict6.py
+ create mode 100644 Dict/dict7.py
+ create mode 100644 Dict/dict8.py
+ create mode 100644 Dict/dict9.py
+ create mode 100644 Exception handling/exception handling
+ create mode 100644 Exception handling/fun.py
+ create mode 100644 Exception handling/raise.py
+ create mode 100644 Exception handling/try.py
+ create mode 100644 Exception handling/try1.py
+ create mode 100644 Exception handling/try2.py
+ create mode 100644 Exception handling/try3.py
+ create mode 100644 Exception handling/try4.py
+ create mode 100644 Exception handling/try5.py
+ create mode 100644 Exception handling/try6.py
+ create mode 100644 IF Syntax/char1.py
+ create mode 100644 IF Syntax/char2.py
+ create mode 100644 IF Syntax/char3.py
+ create mode 100644 IF Syntax/char4.py
+ create mode 100644 IF Syntax/if else .py
+ create mode 100644 IF Syntax/if else 2.py
+ create mode 100644 IF Syntax/if else 3.py
+ create mode 100644 IF Syntax/if else1.py
+ create mode 100644 IF Syntax/if syntax
+ create mode 100644 IF Syntax/if.py
+ create mode 100644 IF Syntax/if1.py
+ create mode 100644 IF Syntax/if2.py
+ create mode 100644 IF Syntax/if3.py
+ create mode 100644 IF Syntax/if4.py
+ create mode 100644 IF Syntax/if5.py
+ create mode 100644 IF Syntax/if6.py
+ create mode 100644 IF Syntax/if7.py
+ create mode 100644 IF Syntax/nest2.py
+ create mode 100644 IF Syntax/nest3.py
+ create mode 100644 IF Syntax/nest4.py
+ create mode 100644 IF Syntax/nest5.py
+ create mode 100644 IF Syntax/nest6.py
+ create mode 100644 IF Syntax/nested1.py
+ create mode 100644 IF Syntax/terNary operator
+ create mode 100644 IF Syntax/ternary operator1.py
+ create mode 100644 IF Syntax/ternary operator2.py
+ create mode 100644 IF Syntax/ternary.py
+ create mode 100644 IF Syntax/unicode1.py
+ create mode 100644 List/list
+ create mode 100644 List/list.py
+ create mode 100644 List/list1.py
+ create mode 100644 List/list10.py
+ create mode 100644 List/list11.py
+ create mode 100644 List/list12.py
+ create mode 100644 List/list13.py
+ create mode 100644 List/list14.py
+ create mode 100644 List/list15.py
+ create mode 100644 List/list16.py
+ create mode 100644 List/list17.py
+ create mode 100644 List/list18.py
+ create mode 100644 List/list19.py
+ create mode 100644 List/list20.py
+ create mode 100644 List/list21.py
+ create mode 100644 List/list3.py
+ create mode 100644 List/list4.py
+ create mode 100644 List/list5.py
+ create mode 100644 List/list6.py
+ create mode 100644 List/list7.py
+ create mode 100644 List/list8.py
+ create mode 100644 List/list9.py
+ create mode 100644 List/max.py
+ create mode 100644 List/min1.py
+ create mode 100644 List/pop.py
+ create mode 100644 List/reverse.py
+ create mode 100644 List/short.py
+ create mode 100644 List/sum.py
+ create mode 100644 Literal,operator/0perator 17.py
+ create mode 100644 Literal,operator/0perator 18.py
+ create mode 100644 Literal,operator/0perator 19.py
+ create mode 100644 Literal,operator/0perator 20.py
+ create mode 100644 Literal,operator/display first digit .py
+ create mode 100644 Literal,operator/display last digit.py
+ create mode 100644 Literal,operator/eight.py
+ create mode 100644 Literal,operator/eighteen.py
+ create mode 100644 Literal,operator/eleven.py
+ create mode 100644 Literal,operator/fifteen.py
+ create mode 100644 Literal,operator/five.py
+ create mode 100644 Literal,operator/four.py
+ create mode 100644 Literal,operator/fourteen.py
+ create mode 100644 Literal,operator/last digit delete.py
+ create mode 100644 Literal,operator/literal and operator
+ create mode 100644 Literal,operator/nine.py
+ create mode 100644 Literal,operator/nineteen.py
+ create mode 100644 Literal,operator/one.py
+ create mode 100644 Literal,operator/operator1.py
+ create mode 100644 Literal,operator/operator10.py
+ create mode 100644 Literal,operator/operator11.py
+ create mode 100644 Literal,operator/operator12.py
+ create mode 100644 Literal,operator/operator13.py
+ create mode 100644 Literal,operator/operator14.py
+ create mode 100644 Literal,operator/operator15.py
+ create mode 100644 Literal,operator/operator16.py
+ create mode 100644 Literal,operator/operator2.py
+ create mode 100644 Literal,operator/operator3.py
+ create mode 100644 Literal,operator/operator4.py
+ create mode 100644 Literal,operator/operator5.py
+ create mode 100644 Literal,operator/operator6.py
+ create mode 100644 Literal,operator/operator7.py
+ create mode 100644 Literal,operator/operator8.py
+ create mode 100644 Literal,operator/operator9.py
+ create mode 100644 Literal,operator/seven.py
+ create mode 100644 Literal,operator/seventeen.py
+ create mode 100644 Literal,operator/six.py
+ create mode 100644 Literal,operator/sixteen.py
+ create mode 100644 Literal,operator/ten.py
+ create mode 100644 Literal,operator/thirteen.py
+ create mode 100644 Literal,operator/three.py
+ create mode 100644 Literal,operator/twelve.py
+ create mode 100644 Literal,operator/twenty.py
+ create mode 100644 Literal,operator/twentyone.py
+ create mode 100644 Literal,operator/twentytwo.py
+ create mode 100644 Literal,operator/two.py
+ create mode 100644 Looping/While (2).py
+ create mode 100644 Looping/for.py
+ create mode 100644 Looping/for1.py
+ create mode 100644 Looping/for10.py
+ create mode 100644 Looping/for11.py
+ create mode 100644 Looping/for12.py
+ create mode 100644 Looping/for13.py
+ create mode 100644 Looping/for14.py
+ create mode 100644 Looping/for15.py
+ create mode 100644 Looping/for16.py
+ create mode 100644 Looping/for17.py
+ create mode 100644 Looping/for18.py
+ create mode 100644 Looping/for19.py
+ create mode 100644 Looping/for2.py
+ create mode 100644 Looping/for20.py
+ create mode 100644 Looping/for21.py
+ create mode 100644 Looping/for22.py
+ create mode 100644 Looping/for23.py
+ create mode 100644 Looping/for24.py
+ create mode 100644 Looping/for25.py
+ create mode 100644 Looping/for26.py
+ create mode 100644 Looping/for27.py
+ create mode 100644 Looping/for28.py
+ create mode 100644 Looping/for29.py
+ create mode 100644 Looping/for3.py
+ create mode 100644 Looping/for30.py
+ create mode 100644 Looping/for4.py
+ create mode 100644 Looping/for5.py
+ create mode 100644 Looping/for6.py
+ create mode 100644 Looping/for7.py
+ create mode 100644 Looping/for8.py
+ create mode 100644 Looping/for9.py
+ create mode 100644 Looping/loop.py
+ create mode 100644 Looping/loop1.py
+ create mode 100644 Looping/loop2.py
+ create mode 100644 Looping/loop3.py
+ create mode 100644 Looping/loop4.py
+ create mode 100644 Looping/looping
+ create mode 100644 Looping/while.py
+ create mode 100644 Looping/while1.py
+ create mode 100644 Looping/while2.py
+ create mode 100644 Looping/while3.py
+ create mode 100644 Looping/while4.py
+ create mode 100644 Looping/while5.py
+ create mode 100644 Looping/while6.py
+ create mode 100644 Looping/while7.py
+ create mode 100644 Looping/while8.py
+ create mode 100644 Multithreading/m1.py
+ create mode 100644 Multithreading/m2.py
+ create mode 100644 Multithreading/m3.py
+ create mode 100644 Multithreading/m4.py
+ create mode 100644 Multithreading/m5.py
+ create mode 100644 Multithreading/m6.py
+ create mode 100644 Multithreading/m7.py
+ create mode 100644 Multithreading/m8.py
+ create mode 100644 Multithreading/multthreading
+ create mode 100644 String/all.py
+ create mode 100644 String/cap.py
+ create mode 100644 String/case.py
+ create mode 100644 String/clear.py
+ create mode 100644 String/comparision.py
+ create mode 100644 String/count.py
+ create mode 100644 String/del.py
+ create mode 100644 String/encode.py
+ create mode 100644 String/endswitch.py
+ create mode 100644 String/find.py
+ create mode 100644 String/first dig.py
+ create mode 100644 String/index.py
+ create mode 100644 String/is lower.py
+ create mode 100644 String/isalpha.py
+ create mode 100644 String/isalpha1.py
+ create mode 100644 String/join.py
+ create mode 100644 String/len.py
+ create mode 100644 String/len1.py
+ create mode 100644 String/lower.py
+ create mode 100644 String/lstrip.py
+ create mode 100644 String/min.py
+ create mode 100644 String/rfind.py
+ create mode 100644 String/rindex.py
+ create mode 100644 String/rstrip.py
+ create mode 100644 String/s.center.py
+ create mode 100644 String/scount.py
+ create mode 100644 String/split.py
+ create mode 100644 String/startend.py
+ create mode 100644 String/startswitch.py
+ create mode 100644 String/str10.py
+ create mode 100644 String/str11.py
+ create mode 100644 String/str2.py
+ create mode 100644 String/str4.py
+ create mode 100644 String/str5.py
+ create mode 100644 String/str6.py
+ create mode 100644 String/str7.py
+ create mode 100644 String/str8.py
+ create mode 100644 String/str9.py
+ create mode 100644 String/string
+ create mode 100644 String/string.py
+ create mode 100644 String/strip.py
+ create mode 100644 String/swap.py
+ create mode 100644 String/ter.py
+ create mode 100644 String/txt.py
+ create mode 100644 String/upper.py
+ create mode 100644 Tuple(set)/set.py
+ create mode 100644 Tuple(set)/set1.py
+ create mode 100644 Tuple(set)/set10.py
+ create mode 100644 Tuple(set)/set11.py
+ create mode 100644 Tuple(set)/set12.py
+ create mode 100644 Tuple(set)/set13.py
+ create mode 100644 Tuple(set)/set2.py
+ create mode 100644 Tuple(set)/set3.py
+ create mode 100644 Tuple(set)/set4.py
+ create mode 100644 Tuple(set)/set5.py
+ create mode 100644 Tuple(set)/set6.py
+ create mode 100644 Tuple(set)/set7.py
+ create mode 100644 Tuple(set)/set8.py
+ create mode 100644 Tuple(set)/set9.py
+ create mode 100644 Tuple(set)/seta.py
+ create mode 100644 Tuple(set)/setb.py
+ create mode 100644 Tuple(set)/setc.py
+ create mode 100644 Tuple(set)/setd.py
+ create mode 100644 Tuple(set)/sete.py
+ create mode 100644 Tuple(set)/setq.py
+ create mode 100644 Tuple(set)/setu.py
+ create mode 100644 Tuple(set)/tuple
+ create mode 100644 Tuple(set)/tuple.py
+ create mode 100644 Tuple(set)/tuple1.py
+ create mode 100644 Tuple(set)/tuple10.py
+ create mode 100644 Tuple(set)/tuple11.py
+ create mode 100644 Tuple(set)/tuple2.py
+ create mode 100644 Tuple(set)/tuple3.py
+ create mode 100644 Tuple(set)/tuple4.py
+ create mode 100644 Tuple(set)/tuple5.py
+ create mode 100644 Tuple(set)/tuple6.py
+ create mode 100644 Tuple(set)/tuple7.py
+ create mode 100644 Tuple(set)/tuple8.py
+ create mode 100644 Tuple(set)/tuple9.py
+ create mode 100644 file handel/fh.py
+ create mode 100644 file handel/fh10.py
+ create mode 100644 file handel/fh11.py
+ create mode 100644 file handel/fh12.py
+ create mode 100644 file handel/fh13.py
+ create mode 100644 file handel/fh14.py
+ create mode 100644 file handel/fh2.py
+ create mode 100644 file handel/fh3.py
+ create mode 100644 file handel/fh4.py
+ create mode 100644 file handel/fh5.py
+ create mode 100644 file handel/fh6.py
+ create mode 100644 file handel/fh7.py
+ create mode 100644 file handel/fh8.py
+ create mode 100644 file handel/fh9.py
+ create mode 100644 file handel/file handling
+ create mode 100644 file handel/file1.txt
+ create mode 100644 file handel/gita.txt
+ create mode 100644 file handel/p1.py
+ create mode 100644 file handel/pic.py
+ create mode 100644 file handel/pic2.py
+ create mode 100644 file handel/sita.txt
+ create mode 100644 function/Types of parameter
+ create mode 100644 function/evenodd.py
+ create mode 100644 function/evenodd1.py
+ create mode 100644 function/evenodd2.py
+ create mode 100644 function/fun1.py
+ create mode 100644 function/fun2.py
+ create mode 100644 function/fun3.py
+ create mode 100644 function/fun4.py
+ create mode 100644 function/fun5.py
+ create mode 100644 function/fun6.py
+ create mode 100644 function/fun7.py
+ create mode 100644 function/function
+ create mode 100644 function/module
+ create mode 100644 function/par.py
+ create mode 100644 function/par1.py
+ create mode 100644 function/par2.py
+ create mode 100644 function/par3.py
+ create mode 100644 function/par4.py
+ create mode 100644 function/par5.py
+ create mode 100644 function/par6.py
+ create mode 100644 function/par7.py
+ create mode 100644 function/simple.py
+ create mode 100644 function/simple1.py
+ create mode 100644 method in oops/different types of variable
+ create mode 100644 method in oops/method  in oops
+ create mode 100644 method in oops/o1.py
+ create mode 100644 method in oops/oops
+ create mode 100644 method in oops/oops1.py
+ create mode 100644 method in oops/oops3.py
+ create mode 100644 method in oops/oops4.py
+ create mode 100644 method in oops/oops5.py
+ create mode 100644 method in oops/oops6.py
+ create mode 100644 method in oops/oops7.py
+ create mode 100644 method in oops/opps2.py
+ create mode 100644 module/Predefine_module/mathmodule2.py
+ create mode 100644 module/Predefine_module/mathmodule3.py
+ create mode 100644 module/Predefine_module/mathmodule4.py
+ create mode 100644 module/Predefine_module/mathmodule5.py
+ create mode 100644 module/Predefine_module/modulemath.py
+ create mode 100644 module/Predefine_module/modulemath1.py
+ create mode 100644 module/Predefine_module/moduleran.py
+ create mode 100644 module/Predefine_module/moduleran1.py
+ create mode 100644 module/Predefine_module/moduleran2.py
+ create mode 100644 module/Predefine_module/moduleran3.py
+ create mode 100644 module/Predefine_module/moduleran4.py
+ create mode 100644 module/module
+ create mode 100644 module/mymath.py
+ create mode 100644 module/package/x/f.py
+ create mode 100644 module/package/x/k.py
+ create mode 100644 module/package/x/s.py
+ create mode 100644 module/package/x/t.py
+ create mode 100644 module/package/x/y/__init__.py
+ create mode 100644 module/package/x/y/__pycache__/__init__.cpython-314.pyc
+ create mode 100644 module/package/x/y/__pycache__/mymath.cpython-314.pyc
+ create mode 100644 module/package/x/y/mymath.py
+ create mode 100644 module/user define module/__pycache__/mymodule.cpython-314.pyc
+ create mode 100644 module/user define module/__pycache__/random.cpython-314.pyc
+ create mode 100644 module/user define module/fifth.py
+ create mode 100644 module/user define module/first.py
+ create mode 100644 module/user define module/fourth.py
+ create mode 100644 module/user define module/mymodule.py
+ create mode 100644 module/user define module/second.py
+ create mode 100644 module/user define module/six.py
+ create mode 100644 module/user define module/third.py
+ create mode 100644 pandasprogram/newstudent.xlsx
+ create mode 100644 pandasprogram/p1.py
+ create mode 100644 pandasprogram/p10.py
+ create mode 100644 pandasprogram/p11.py
+ create mode 100644 pandasprogram/p12.py
+ create mode 100644 pandasprogram/p13.py
+ create mode 100644 pandasprogram/p14.py
+ create mode 100644 pandasprogram/p15.py
+ create mode 100644 pandasprogram/p16.py
+ create mode 100644 pandasprogram/p17.py
+ create mode 100644 pandasprogram/p18.py
+ create mode 100644 pandasprogram/p19.py
+ create mode 100644 pandasprogram/p2.py
+ create mode 100644 pandasprogram/p20.py
+ create mode 100644 pandasprogram/p21.py
+ create mode 100644 pandasprogram/p22.py
+ create mode 100644 pandasprogram/p3.py
+ create mode 100644 pandasprogram/p4.py
+ create mode 100644 pandasprogram/p5.py
+ create mode 100644 pandasprogram/p6.py
+ create mode 100644 pandasprogram/p7.py
+ create mode 100644 pandasprogram/p8.py
+ create mode 100644 pandasprogram/p9.py
+ create mode 100644 pandasprogram/student.csv
+ create mode 100644 pandasprogram/student.xlsx
+ create mode 100644 pandasprogram/~$student.xlsx
+ create mode 100644 practice/d.py
+ create mode 100644 practice/d2.py
+ create mode 100644 practice/m.py
+ create mode 100644 practice/positive or negative.py
+
+D:\gitprogram\mypythonprogram>git push -u origin
+info: please complete authentication in your browser...
+Enumerating objects: 403, done.
+Counting objects: 100% (403/403), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (311/311), done.
+Writing objects: 100% (403/403), 82.00 KiB | 1.22 MiB/s, done.
+Total 403 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/kamaljit-05/mypythonprogram.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
