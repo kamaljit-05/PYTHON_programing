@@ -5,4 +5,6 @@ def simple_interst():
 	r=int(input())
 	print("enter time period")
 	t=int(input())
-	si
+	si=p*r*t/100
+	print("simple_interst= ",si)
+simple_interst()
