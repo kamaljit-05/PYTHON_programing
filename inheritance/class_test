@@ -1,0 +1,94 @@
+class Test:
+	def __init__(self):
+		print("constructor")
+t=Test()
+t1=Test()
+#t2=Test(20) error
+o/p:
+constructor
+constructor
+
+
+class Test:
+	def __init__(self,a):
+		print("para constructor")
+t=Test(20) 
+t1=Test(2.4)
+#t2=Test() #error
+
+o/p:
+para constructor
+para constructor
+
+constructor overloading  not support in python
+______________________________________________
+class Test:
+	def __init__(self):
+		print("constructor")
+	def __init__(self,a):
+		print("para constructor")
+t=Test(20) 
+t1=Test(2.4)
+#t2=Test() #error
+
+o/p:
+para constructor
+para constructor
+
+
+class Test:
+	
+	def __init__(self,a):
+		print("para constructor")
+    def __init__(self):
+		print("constructor")
+#t=Test(20)  # error
+#t1=Test(2.4) # error
+t2=Test() 
+
+
+o/p:
+constructor
+
+
+
+
+default parameter
+__________________
+
+class Test:
+	
+	def __init__(self,a=0):
+		print("default parameter constructor")
+t=Test(20)  
+#t1=Test(2.4) 
+t2=Test() 
+
+o/p:
+default parameter constructor
+
+
+
+
+class Test:
+	def __init__(self):
+		self.a=10
+		self.__b=20
+t=Test()
+print(t.a)  #10
+#print(t.__b)  error
+
+
+
+class Test:
+    def __init__(self):
+        self.__b = 20
+    
+    def get_b(self):
+        return self.__b
+
+t = Test()
+print(t.get_b())
+
+
+https://chatgpt.com/share/699d1a00-8ff4-8008-8fa9-4faa56d67466

@@ -1,0 +1,682 @@
+Abstraction in Python
+Abstraction is one of the core concepts of Object-Oriented Programming (OOP). It means hiding the internal details and showing only the essential features to the user.
+
+
+In Python, abstract classes are used to define blueprints for other classes. They cannot be instantiated directly and often include abstract methods that must be implemented by any subclass.
+
+To create an abstract class in Python, we use the abc module (Abstract Base Classes).
+In Python, abstraction is implemented using:
+
+Abstract Base Classes (ABC)
+
+@abstractmethod decorator from the abc module
+
+🔹 Why Abstraction?
+Reduces complexity
+
+Increases security
+
+Encourages code reusability
+
+Helps in designing clean APIs and blueprints
+
+🔹 How to Implement Abstraction in Python
+We use the abc module which provides infrastructure for defining abstract base classes.
+
+from abc import ABC, abstractmethod
+# Abstract class
+class Animal(ABC):
+
+    @abstractmethod
+    def sound(self):
+        pass
+    def sleep(self):  # normal method
+        print("Sleeping...")
+# Subclass implementing the abstract method
+class Dog(Animal):
+    def sound(self):
+        print("Bark")
+
+class Cat(Animal):
+    def sound(self):
+        print("Meow")
+
+# a = Animal()  # ❌ Error: Can't instantiate abstract class
+
+# Create objects
+dog = Dog()
+dog.sound()     # Output: Bark
+dog.sleep()     # Output: Sleeping...
+cat = Cat()
+cat.sound()     # Output: Meow
+
+
+shape class   abstract class   2 abstract method  area   perimeter  .
+rectangle child class   
+square child class   
+
+reactangle object 
+call area and perimeter
+square class object
+call area and perimeter
+
+
+
+from abc import ABC, abstractmethod
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+    @abstractmethod
+    def perimeter(self):
+        pass
+class Rectangle(Shape):
+    def init(self, length, width):
+        self.length = length
+        self.width = width
+    def area(self):
+        return self.length * self.width
+    def perimeter(self):
+        return 2 * (self.length + self.width)
+class Circle(Shape):
+    def init(self, radius):
+        self.radius = radius
+    def area(self):
+        return 3.14 * self.radius ** 2
+    def perimeter(self):
+        return 2 * 3.14 * self.radius
+r = Rectangle(10, 5)
+print("Rectangle Area:", r.area())
+print("Rectangle Perimeter:", r.perimeter())
+c = Circle(7)
+print("Circle Area:", c.area())
+print("Circle Perimeter:,c.perimeter())
+
+
+
+
+exception handling
+________________________
+print("A")
+print(10//2)
+print("B")
+
+o/p:
+A
+5
+B
+
+
+
+
+
+
+print("A")
+print(10//0)
+print("B")
+o/p:
+
+C:\Users\HP\Desktop\python p>py 1.py
+A
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\python p\1.py", line 2, in <module>
+    print(10//0)
+          ~^^
+ZeroDivisionError: integer division or modulo by zero
+
+C:\Users\HP\Desktop\python p>
+
+
+exception:
+A unwanted unexcept event that distrube normally flow of excution is exception.
+
+exception handling
+____________________
+it provides alternate way to execute rest of the program.
+it is possible by using 4 keyword.
+
+try
+except
+finally
+raise
+
+
+try:
+	risky code
+except Exceptioname:
+	handle code
+
+
+
+print("A")
+try:
+	print(10//2)
+	print("end try block")
+except:
+	print("exception handle ")
+print("program end")
+
+o/P:
+C:\Users\HP\Desktop\python p>py 1.py
+A
+5
+end try block
+program end
+
+
+
+
+print("A")
+try:
+	print("try start")
+	print(10//0)
+	print("end try block")
+except:
+	print("exception handle ")
+print("program end")
+
+o/p:
+C:\Users\HP\Desktop\python p>py 1.py
+A
+try start
+exception handle
+program end
+
+
+
+
+
+
+print("A")
+try:
+	print("try start")
+	print(10//2)
+	print("end try block")
+except:
+	print("exception handle ")
+print("program end")
+o/p:
+C:\Users\HP\Desktop\python p>py 1.py
+A
+try start
+5
+end try block
+program end
+
+
+
+
+print("A")
+try:
+	print("try start")
+	print(10//0)
+	print("end try block")
+except Exception:
+	print("exception handle  all type")
+print("program end")
+o/p:
+C:\Users\HP\Desktop\python p>py 1.py
+A
+try start
+exception handle  all type
+program end
+
+
+
+print("A")
+try:
+	print("try start")
+	print(10//0)
+	print("end try block")
+except BaseException:
+	print("exception handle  all type")
+print("program end")
+
+o/p:
+C:\Users\HP\Desktop\python p>py 1.py
+A
+try start
+exception handle  all type
+program end
+
+
+
+
+print("A")
+try:
+	print("try start")
+	print(10//0)
+	print("end try block")
+except ZeroDivisionError:
+	print("exception handle")
+print("program end")
+
+o/p:
+A
+try start
+exception handle
+program end
+
+
+
+
+
+print("A")
+try:
+	print("try start")
+	print(10//0)
+	print("end try block")
+except IndexError:
+	print("exception handle")
+print("program end")
+o/p:
+
+C:\Users\HP\Desktop\python p>py 1.py
+A
+try start
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\python p\1.py", line 4, in <module>
+    print(10//0)
+          ~^^
+ZeroDivisionError: integer division or modulo by zero
+
+indexError
+
+L=[10,20,30]
+try:
+	print(L[3])
+except IndexError:
+	print("index out of range")
+print("program end")
+o/p:
+index out of range
+program end
+
+
+d={1:"A",3:"B"}
+try:
+	print(d[4])
+except KeyError:
+	print("key not found")
+print("program end")
+
+o/p:
+key not found
+program end
+
+
+
+a="10"
+b=a/2
+C:\Users\HP\Desktop\python p>py 1.py
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\python p\1.py", line 2, in <module>
+    b=a/2
+      ^
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+
+
+
+a="10"
+c=a/b
+o/P;
+C:\Users\HP\Desktop\python p>py 1.py
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\python p\1.py", line 2, in <module>
+    c=a/b
+        ^
+NameError: name 'b' is not defined
+
+
+a=int(input())
+print(a)
+C:\Users\HP\Desktop\python p>py 1.py
+two
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\python p\1.py", line 1, in <module>
+    a=int(input())
+      ^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'two'
+
+
+
+
+
+
+
+try:
+	risky code
+except:
+	exception caught1
+
+except:
+	exception caught2
+
+
+
+L=[10,5,7,6]
+try:
+	print(L[2]/2)
+except IndexError:
+	print("index error")
+except ZeroDivisionError:
+	print("zero division error")
+print("program end")
+
+o/p:
+3.5
+program end
+
+
+L=[10,5,7,6]
+try:
+	print(L[2]/0)
+except IndexError:
+	print("index error")
+except ZeroDivisionError:
+	print("zero division error")
+print("program end")
+o/p:
+C:\Users\HP\Desktop\python p>py 1.py
+zero division error
+program end
+
+
+L=[10,5,7,6]
+try:
+	print(L[4]/0)
+except IndexError:
+	print("index error")
+except ZeroDivisionError:
+	print("zero division error")
+print("program end")
+o/p:
+index error
+program end
+
+
+
+
+
+L=[10,5,7,6]
+try:
+	print(L[4]/0)
+except:
+	print("handle all type")
+except IndexError:
+	print("index error")
+except ZeroDivisionError:
+	print("zero division error")
+print("program end")
+
+
+C:\Users\HP\Desktop\python p>py 1.py
+  File "C:\Users\HP\Desktop\python p\1.py", line 4
+    except:
+    ^^^^^^^
+SyntaxError: default 'except:' must be last
+
+
+L=[10,5,7,6]
+try:
+	print(L[4]/0)
+except IndexError:
+	print("index error")
+except ZeroDivisionError:
+	print("zero division error")
+except:
+	print("handle all type")
+print("program end")
+
+indexerror
+program end
+
+
+finally:
+THis block must be execute.
+resource close
+
+
+
+
+L=[10,5,7,6]
+try:
+	print(L[2]/2)
+finally:
+	print("must exceute")
+print("program end")
+
+
+o/p:
+C:\Users\HP\Desktop\python p>py 1.py
+3.5
+must exceute
+program end
+
+
+
+L=[10,5,7,6]
+try:
+	print(L[2]/0)
+finally:
+	print("must exceute")
+print("program end")
+
+
+o/p:
+must exceute
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\python p\1.py", line 3, in <module>
+    print(L[2]/0)
+          ~~~^
+ZeroDivisionError: division by zero
+
+
+
+L=[10,5,7,6]
+try:
+	print(L[2]/0)
+except:
+	print("exception handle")
+finally:
+	print("must exceute")
+print("program end")
+
+o/p:
+C:\Users\HP\Desktop\python p>py 1.py
+exception handle
+must exceute
+program end
+
+
+
+def divide(no1,no2):
+	print("divide start")
+	print(no1/no2)
+	print("divide end")
+print("main start")
+divide(10,2)
+print("main end")
+o/p:
+main start
+divide start
+5.0
+divide end
+main end
+
+
+
+
+
+def divide(no1,no2):
+	print("divide start")
+	print(no1/no2)
+	print("divide end")
+print("main start")
+divide(10,2)
+divide(10,0)
+print("main end")
+
+
+
+C:\Users\HP\Desktop\python p>py 1.py
+main start
+divide start
+5.0
+divide end
+divide start
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\python p\1.py", line 7, in <module>
+    divide(10,0)
+  File "C:\Users\HP\Desktop\python p\1.py", line 3, in divide
+    print(no1/no2)
+          ^
+ZeroDivisionError: division by zero
+
+
+
+
+
+
+def divide(no1,no2):
+	print("divide start")
+	try:
+		print(no1/no2)
+	except:
+		print("caught")
+	print("divide end")
+print("main start")
+divide(10,2)
+divide(10,0)
+print("main end")
+
+
+o/p:
+C:\Users\HP\Desktop\python p>py 1.py
+main start
+divide start
+5.0
+divide end
+divide start
+caught
+divide end
+main end
+
+
+
+def divide(no1,no2):
+	print("divide start")
+	print(no1/no2)
+	print("divide end")
+print("main start")
+divide(10,2)
+try:
+	divide(10,0)
+except:
+	print("exceptio hadle")
+print("main end")
+
+o/p:
+mai start
+dive stat
+5
+divide ed
+divide start
+exceptio hadle
+mai end
+
+
+
+
+
+
+
+raise is used in userdefined exception.
+
+
+class NegativeError(BaseException):
+	def init(self):
+		print("negative number not allow")
+print("enter a number ")
+no=int(input())
+if no<0:
+	raise NegativeError()
+else:
+	print("number=",no)
+
+
+o/p:
+enter a number
+-2
+negative number not allow
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\python p\1.py", line 7, in <module>
+    raise NegativeError()
+NegativeError
+
+
+
+
+class NegativeError(BaseException):
+	def init(self):
+		print("negative number not allow")
+print("enter a number ")
+no=int(input())
+if no<0:
+	raise NegativeError()
+else:
+	print("number=",no)
+print("program end")
+
+
+o/p:
+
+C:\Users\HP\Desktop\python p>py 1.py
+enter a number
+5
+number= 5
+program end
+
+C:\Users\HP\Desktop\python p>py 1.py
+enter a number
+-2
+negative number not allow
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\python p\1.py", line 7, in <module>
+    raise Nega
+
+
+
+
+
+
+class NegativeError(BaseException):
+	def _init_(self):
+		print("negative number not allow")
+print("enter a number ")
+no=int(input())
+if no<0:
+	try:
+		raise NegativeError()
+	except:
+		print("exception caught negative number not allow ")
+else:
+	print("number=",no)
+print("program ed")
+
+C:\Users\HP\Desktop\python p>py 1.py
+enter a number
+5
+number= 5
+program ed
+
+C:\Users\HP\Desktop\python p>py 1.py
+enter a number
+-2
+negative number not allow
+exception caught negative number not allow
+program end
+
+https://chatgpt.com/share/68810a16-c230-8008-a6a4-155c038fca01
+https://chatgpt.com/share/68553159-dce4-8008-a039-3cc0362a89eb

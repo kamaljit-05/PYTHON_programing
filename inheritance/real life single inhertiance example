@@ -1,0 +1,693 @@
+real life single inhertiance example 
+_________________________________________
+
+# Parent class
+class Person:
+    def __init__(self, name, age):
+        self._name = name       # Protected variable (by convention)
+        self._age = age
+        print("Person constructor called")
+    # Setter methods
+    def set_name(self, name):
+        self._name = name
+
+    def set_age(self, age):
+        self._age = age
+
+    # Getter methods
+    def get_name(self):
+        return self._name
+
+    def get_age(self):
+        return self._age
+
+    # Extra method
+    def show_info(self):
+        print(f"Name: {self._name}, Age: {self._age}")
+
+# Child class
+class Student(Person):
+    def __init__(self, name, age, roll, course):
+        super().__init__(name, age)  # Call constructor of Person
+        self._roll = roll
+        self._course = course
+        print("Student constructor called")
+
+    # Setter methods
+    def set_roll(self, roll):
+        self._roll = roll
+
+    def set_course(self, course):
+        self._course = course
+
+    # Getter methods
+    def get_roll(self):
+        return self._roll
+
+    def get_course(self):
+        return self._course
+
+    # Extra method
+    def show_student_info(self):
+        self.show_info()  # Reuse parent method
+        print(f"Roll: {self._roll}, Course: {self._course}")
+
+# Create object of Student
+s1 = Student("Rahul", 20, 101, "B.Tech")
+s1.show_student_info()
+
+# Modify values using setters
+s1.set_name("Ravi")
+s1.set_age(21)
+s1.set_roll(102)
+s1.set_course("MCA")
+
+print("\nAfter update:")
+s1.show_student_info()
+
+https://chatgpt.com/share/687fbfee-c8bc-8008-aa2d-ade71a92cf1a
+
+
+
+mro
+________
+MRO (Method Resolution Order) is the order in which Python looks for a method or attribute in a hierarchy of classes when you call a method on an object.
+
+It is especially important in multiple inheritance scenarios, where a class can inherit from more than one class.
+
+
+class A:
+    def show(self):
+        print("A")
+
+class B(A):
+    def show(self):
+        print("B")
+
+class C(A):
+    def show(self):
+        print("C")
+
+class D(B, C):
+    pass
+
+d = D()
+d.show()
+
+
+
+
+class A:
+    def show(self):
+        print("A")
+
+class B(A):
+    def show(self):
+        print("B")
+
+class C(A):
+    def show(self):
+        print("C")
+
+class D(C,B):
+    pass
+
+d = D()
+d.show()
+print(D.mro())
+
+
+o/P:
+C
+[<class '__main__.D'>, <class '__main__.C'>, <class '__main__.B'>, <class '__main__.A'>, <class 'object'>]
+
+
+
+class A:
+	print("A static block")
+	def __init__(self):
+		self.x=10
+		print("A constructor")
+	def __del__(self):
+		print("A destructor ")
+	
+class B(A):
+	print("B static block")
+	def __init__(self):
+		self.y=20
+		super().__init__()
+		print("B constructor")
+	def __del__(self):
+		super().__del__()
+		print("B destructor ",self.x)
+	
+ob=B()
+print(ob.__dict__)
+help(D)
+
+class D(C, B)
+ |  Method resolution order:
+ |      D
+ |      C
+ |      B
+ |      A
+ |      builtins.object
+ |
+ |  Methods inherited from C:
+ |
+ |  show(self)
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors inherited from A:
+ |
+ |  __dict__
+ |      dictionary for instance variables
+ |
+ |  __weakref__
+ |      list of weak references to the object
+
+
+
+
+
+
+
+class A:
+    def show(self):
+        print("A")
+
+class B(A):
+    def show(self):
+        print("B")
+
+class C(A):
+    def show(self):
+        print("C")
+
+class D(B, C):
+   def show(self):
+   		print("D")
+
+ob=D()
+ob.show()
+
+
+o/P:
+D
+
+
+
+
+
+
+
+
+
+class A:
+    def show(self):
+        print("A")
+
+class B(A):
+    def show(self):
+        super().show()
+        print("B")
+
+class C(A):
+    def show(self):
+       
+        super().show()
+         print("C")
+
+class D(C,B):
+   def show(self):
+   		
+   		
+   		super().show()
+   		print("D")
+
+ob=D()
+ob.show()
+
+
+o/P;
+A
+B
+C
+D
+
+
+
+
+
+
+
+class A:
+    def __init__(self):
+    	print("hi")
+    	self.x=10
+class B(A):
+   def __init__(self):
+
+   		super().__init__()
+   		print(self.x)
+   		self.x=20
+ob=B()
+print(ob.__dict__)
+
+o/P;
+hi
+10
+{'x': 20}
+
+
+
+
+class A:
+    @classmethod
+    def show(cls):
+    	print("show class function")
+    @staticmethod
+    def disp():
+    	print("disp static method")
+class B(A):
+  pass
+B.show()
+B.disp()
+
+
+o/p:
+show class function
+disp static method
+
+
+
+
+Polymorphism in Python
+Definition:
+Polymorphism means "many forms". In Python (and OOP in general), polymorphism allows objects of different classes to be treated as objects of a common superclass.
+
+🔹 Types of Polymorphism in Python
+Duck Typing (Dynamic Typing)
+
+Method Overriding (Runtime Polymorphism)
+
+Function Overloading (Not supported natively in Python)
+
+Operator Overloading
+
+
+
+Duck Typing (Dynamic Typing)
+
+
+If it looks like a duck and quacks like a duck, it's a duck.
+
+class Dog:
+    def sound(self):
+        print("Bark")
+
+class Cat:
+    def sound(self):
+        print("Meow")
+
+def make_sound(animal):
+    animal.sound()
+
+d = Dog()
+c = Cat()
+
+make_sound(d)  # Bark
+make_sound(c)  # Meow
+
+
+2. Method Overriding (Runtime Polymorphism)
+Subclass redefines a method of the parent class.
+
+child not statify parent method implentation .
+class Parent:
+	def property(self):
+		print("money+car+glod")
+	def marry(self):
+		print("mama")
+class Child(Parent):
+	def marry(self):
+		print("riya")
+c=Child()
+c.property()
+c.marry()
+
+
+o/p:
+money+car+glod
+riya
+
+
+
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal):
+    def speak(self):
+        print("Dog barks")
+
+class Cat(Animal):
+    def speak(self):
+        print("Cat meows")
+
+a = Animal()
+d = Dog()
+c = Cat()
+
+a.speak()  # Animal speaks
+d.speak()  # Dog barks
+c.speak()  # Cat meows
+
+
+
+o/p:
+
+
+
+
+operator overloading
+_________________________
+
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+
+    def display(self):
+        print(f"({self.x}, {self.y})")
+
+p1 = Point(1, 2)
+p2 = Point(3, 4)
+
+p3 = p1 + p2  # Uses __add__()   call   p1.__add__(p2)
+p3.display()  # (4, 6)
+
+
+class Time:
+    def __init__(self, h, m, s):
+        self.h = h
+        self.m = m
+        self.s = s
+    def __add__(self, other):
+        total_sec = self.s + other.s
+        total_min = self.m + other.m
+        total_hr = self.h + other.h
+        if total_sec >= 60:
+            total_sec -= 60
+            total_min += 1
+
+        if total_min >= 60:
+            total_min -= 60
+            total_hr += 1
+
+        return Time(total_hr, total_min, total_sec)
+
+    def display(self):
+        print(f"{self.h:02}:{self.m:02}:{self.s:02}")
+
+# Creating two time objects
+t1 = Time(5, 40, 35)
+t2 = Time(4, 30, 45)
+
+# Add times
+t3 = t1 + t2  # t1.__add__(t2)
+
+# Display result
+t3.display()  # 10:11:20
+
+
+
+
+
+
+operator overloading
+_______
+interpeter know how to add 2 number
+                      add 2 real number
+interpeter not working  operator in userdefined datatype.
+
+class Mycomplex:
+	def init(self,r,i):
+		self.r=r
+		self.i=i
+	def show(self):
+		print(self.r,"+",self.i,"i")
+c1=Mycomplex(2,3)
+c2=Mycomplex(3,4)
+c3=Mycomplex(0,0)
+#c3=c1+c2
+c3.r=c1.r+c2.r
+c3.i=c1.i+c2.i
+c1.show()
+c2.show()
+c3.show()
+C:\Users\HP\Desktop>py test.py
+2 + 3 i
+3 + 4 i
+5 + 7 i
+
+class Mycomplex:
+	def init(self,r,i):
+		self.__r=r
+		self.__i=i
+	def show(self):
+		print(self._r,"+",self._i,"i")
+c1=Mycomplex(2,3)
+c2=Mycomplex(3,4)
+c3=Mycomplex(0,0)
+#c3=c1+c2  error
+#c3._r=c1.r+c2._r error
+#c3._i=c1.i+c2._i  error
+c1.show()
+c2.show()
+c3.show()
+
+o/p:
+error
+
+
+
+
+class Mycomplex:
+	def init(self,r,i):
+		self.__r=r
+		self.__i=i
+	def show(self):
+		print(self._r,"+",self._i,"i")
+	def add(self,c2):
+		c3=Mycomplex(0,0)
+		c3._r=self.r+c2._r
+		c3._i=self.i+c2._i
+		return c3
+c1=Mycomplex(2,3)
+c2=Mycomplex(3,4)
+c3=c1+c2  #c1.add(c2)
+c1.show()
+c2.show()
+c3.show()
+
+
+
+
+class Mycomplex:
+    def init(self,r,i):
+        self.__r=r
+        self.__i=i
+    def show(self):
+        print(self._r,"+",self._i,"i")
+    def sub(self,c2):
+        c3=Mycomplex(0,0)
+        c3._r=self.r-c2._r
+        c3._i=self.i-c2._i
+        return c3
+c1=Mycomplex(2,3)
+c2=Mycomplex(3,4)
+c3=c1-c2  #c1.sub(c2)
+c1.show()
+c2.show()
+c3.show()
+
+
+
+Operator	Magic Method
++	add(self, other)
+–	sub(self, other)
+*	mul(self, other)
+/	truediv(self, other)
+//	floordiv(self, other)
+%	mod(self, other)
+**	pow(self, other)
+>>	rshift(self, other)
+<<	lshift(self, other)
+&	and(self, other)
+|	or(self, other)
+^	xor(self, other)     a=5  b=6 
+                        101
+                        110
+                         0 1 1
+
+Comparison Operators:
+Operator	Magic Method
+<	lt(self, other)
+> 	gt(self, other)
+<=	le(self, other)
+>=	ge(self, other)
+==	eq(self, other)
+!=	ne(self, other)
+Assignment Operators:
+
+Operator	Magic Method
+-=	isub(self, other)
++=	iadd(self, other)
+*=	imul(self, other)
+/=	idiv(self, other)
+//=	ifloordiv(self, other)
+%=	imod(self, other)
+**=	ipow(self, other)
+>>=	irshift(self, other)
+<<=	ilshift(self, other)
+&=	iand(self, other)
+|=	ior(self, other)
+^=	ixor(self, other)
+Unary Operators:
+
+Operator	Magic Method
+–	neg(self)
++	pos(self)
+~	invert(self)
+
+
+
+lessthan operator overloading
+___________
+class Mycomplex:
+	def init(self,r,i):
+		self.__r=r
+		self.__i=i
+	def show(self):
+		print(self.__r,"+",self._i,"i")
+	def lt(self,c2):
+		if self.__r<c2.r and self.i<c2._i:
+			return True 
+		else:
+			return False
+c1=Mycomplex(2,3)
+c2=Mycomplex(3,4)
+print(c1<c2)
+
+
+class Test:
+    def init(self):
+        self.x=10
+        self.y=12.34
+    def str(self):
+        return '{self.x} {self.y}'.format(self=self)
+t=Test()
+print(t)
+g
+
+
+
+
+class Complex:
+ 
+    # Constructor
+    def init(self, real, imag):
+        self.real = real
+        self.imag = imag
+"""
+    # For call to repr(). Prints object's information
+    def repr(self):
+        return 'Rational(%s, %s)' % (self.real, self.imag)   
+""" 
+"""
+    # For call to str(). Prints readable form
+    def str(self):
+        return 'hi %s + i%s' % (self.real, self.imag)  
+"""  
+# Driver program to test above
+t = Complex(10, 20)
+ 
+# Same as "print t"
+print(t)
+print (str(t))
+print (repr(t))
+[20:13, 7/3/2024] Jitusir 9090519502 Ltlt: class Time:
+    def init(self, hours, minutes):
+        self.hours = hours
+        self.minutes = minutes
+    def add(self, other_time):
+        # Check if the other_time is a Time object
+        if not isinstance(other_time, Time):
+            raise TypeError("Can only add Time objects together")
+
+        # Add the hours and minutes, and handle carryover
+        total_hours = self.hours + other_time.hours
+        total_minutes = self.minutes + other_time.minutes
+
+        if total_minutes >= 60:
+            total_hours += 1
+            total_minutes -= 60
+
+        return Time(total_hours, total_minutes)
+
+    def str(self):
+        return f"{self.hours:02d}:{self.minutes:02d}"
+
+# Example usage:
+time1 = Time(2, 30)
+time2 = Time(1, 45)
+
+result = time1 + time2
+print("Time 1:", time1)
+print("Time 2:", time2)
+print("Time 1 + Time 2:", result)
+
+
+
+
+class Time:
+    def init(self, hours, minutes, seconds):
+        self.hours = hours
+        self.minutes = minutes
+        self.seconds = seconds
+
+    def add(self, other_time):
+        # Check if the other_time is a Time object
+        if not isinstance(other_time, Time):
+            raise TypeError("Can only add Time objects together")
+
+        # Add the hours, minutes, and seconds, and handle carryover
+        total_seconds = self.seconds + other_time.seconds
+        total_minutes = self.minutes + other_time.minutes
+        total_hours = self.hours + other_time.hours
+
+        if total_seconds >= 60:
+            total_minutes += total_seconds // 60
+            total_seconds %= 60
+
+        if total_minutes >= 60:
+            total_hours += total_minutes // 60
+            total_minutes %= 60
+
+        return Time(total_hours, total_minutes, total_seconds)
+
+    def str(self):
+        return f"{self.hours:02d}:{self.minutes:02d}:{self.seconds:02d}"
+
+# Example usage:
+time1 = Time(2, 30, 45)
+time2 = Time(1, 45, 30)
+
+result = time1 + time2
+print("Time 1:", time1)
+print("Time 2:", time2)
+print("Time 1 + Time 2:", result)
