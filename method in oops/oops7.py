@@ -1,4 +1,3 @@
-
 class Student:
     name="#"  
     rollno=0    

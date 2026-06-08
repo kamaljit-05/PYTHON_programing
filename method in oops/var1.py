@@ -1,5 +1,5 @@
 class Demo:
-    c=0# class variable
+    c=0  #class variable
     def __init__(self):
         Demo.c=1
         self.a=1

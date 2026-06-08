@@ -1,3 +1,5 @@
+cd f0lder_name  (to update specific folder)
+cd..  (to update the main folder)
 git add .
 git commit -m "all program"
 git push -u origin
