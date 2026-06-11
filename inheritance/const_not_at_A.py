@@ -7,3 +7,4 @@ class B(A):
 		print("B show")
 ob=B()
 ob.show()
+ 
