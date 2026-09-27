@@ -6,6 +6,9 @@ string              'a' "a" '''a''' """a"""
 bool                 True False
 complex               2+3j  4-5j
 
+
+it follow PEMDAS (parenthesis,exponential,multiplication,division,addition,substraction)
+
 5
 5.0
 '5'
